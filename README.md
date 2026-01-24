@@ -139,7 +139,7 @@ the `-e` parameter in the format `<VARIABLE_NAME>=<VALUE>`.
 |`VNC_LISTENING_PORT`| Port used by the VNC server to serve the application's GUI. This port is internal to the container and typically does not need to be changed. By default, a container uses the default bridge network, requiring each internal port to be mapped to an external port (using the `-p` or `--publish` argument). If another network type is used, changing this port may prevent conflicts with other services/containers. **NOTE**: A value of `-1` disables VNC access to the application's GUI. | `5900` |
 |`VNC_PASSWORD`| Password required to connect to the application's GUI. See the [VNC Password](#vnc-password) section for details. | (no value) |
 |`ENABLE_CJK_FONT`| When set to `1`, installs the open-source font `WenQuanYi Zen Hei`, supporting a wide range of Chinese/Japanese/Korean characters. | `0` |
-|`CHROMIUM_APP_URL`| URL of the website to launch in a dedicated, minimalist window without browser UI components like the address bar or tabs, essentially running it as a desktop application. | `0` |
+|`CHROMIUM_APP_URL`| URL of the website to launch in a dedicated, minimalist window without browser UI components like the address bar or tabs, essentially running it as a desktop application. | (no value) |
 
 #### Deployment Considerations
 

@@ -95,7 +95,6 @@ container:
         browser UI components like the address bar or tabs, essentially running
         it as a desktop application.
       type: public
-      default: 0
       unraid_template:
         title: "Application mode URL"
         display: advanced
