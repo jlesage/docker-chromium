@@ -56,6 +56,11 @@ app:
           [default seccomp profile]: https://github.com/moby/moby/blob/master/vendor/github.com/moby/profiles/seccomp/default.json
           [seccomp profile]: https://docs.docker.com/engine/security/seccomp/
   changelog:
+    - version: 26.01.2
+      date: 2026-01-23
+      changes:
+        - 'Updated Chromium to version 144.0.7559.96-r0.'
+        - 'Added an environment variable that allows Chromium to launch in application mode with a specified website.'
     - version: 26.01.1
       date: 2026-01-04
       changes:
