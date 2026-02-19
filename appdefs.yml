@@ -56,6 +56,11 @@ app:
           [default seccomp profile]: https://github.com/moby/moby/blob/master/vendor/github.com/moby/profiles/seccomp/default.json
           [seccomp profile]: https://docs.docker.com/engine/security/seccomp/
   changelog:
+    - version: 26.02.3
+      date: 2026-02-19
+      changes:
+        - 'Updated baseimage to version 4.11.1, bringing the following changes:'
+        - '2:Fixed issue where taking ownership of directory would fail.'
     - version: 26.02.2
       date: 2026-02-18
       changes:
