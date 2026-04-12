@@ -56,6 +56,10 @@ app:
           [default seccomp profile]: https://github.com/moby/moby/blob/master/vendor/github.com/moby/profiles/seccomp/default.json
           [seccomp profile]: https://docs.docker.com/engine/security/seccomp/
   changelog:
+    - version: 26.04.1
+      date: 2026-04-11
+      changes:
+        - 'Updated Chromium to version 146.0.7680.177-r0.'
     - version: 26.03.2
       date: 2026-03-14
       changes:
