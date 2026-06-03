@@ -7,8 +7,6 @@
 set -e # Exit immediately if a command exits with a non-zero status.
 set -u # Treat unset variables as an error.
 
-export HOME=/config
-
 rm -rf /config/chromium/Singleton*
 
 exec /usr/bin/chromium-browser "$@" >> /config/log/chromium/output.log 2>> /config/log/chromium/error.log
