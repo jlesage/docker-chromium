@@ -16,4 +16,9 @@ if [ -n "${CHROMIUM_APP_URL:-}" ]; then
     printf "%s\n" "--app=$CHROMIUM_APP_URL"
 fi
 
+# Custom arguments.
+if [ -n "${CHROMIUM_CUSTOM_ARGS:-}" ]; then
+    eval 'for word in '$CHROMIUM_CUSTOM_ARGS'; do echo "$word"; done'
+fi
+
 # vim:ft=sh:ts=4:sw=4:et:sts=4

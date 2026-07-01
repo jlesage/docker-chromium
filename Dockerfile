@@ -58,7 +58,8 @@ RUN \
 
 # Set public environment variables.
 ENV \
-    CHROMIUM_APP_URL=
+    CHROMIUM_APP_URL= \
+    CHROMIUM_CUSTOM_ARGS=
 
 # Metadata.
 LABEL \

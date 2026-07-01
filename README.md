@@ -148,6 +148,7 @@ the `-e` parameter in the format `<VARIABLE_NAME>=<VALUE>`.
 |`VNC_PASSWORD`| Password required to connect to the application's GUI. See the [VNC Password](#vnc-password) section for details. | (no value) |
 |`ENABLE_CJK_FONT`| When set to `1`, installs the open-source font `WenQuanYi Zen Hei`, supporting a wide range of Chinese/Japanese/Korean characters. | `0` |
 |`CHROMIUM_APP_URL`| URL of the website to launch in a dedicated, minimalist window without browser UI components like the address bar or tabs, essentially running it as a desktop application. | (no value) |
+|`CHROMIUM_CUSTOM_ARGS`| Custom arguments to pass to Chromium. | (no value) |
 
 #### Deployment Considerations
 

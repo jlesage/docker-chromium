@@ -143,6 +143,15 @@ container:
         display: advanced
         required: false
         mask: false
+    - name: CHROMIUM_CUSTOM_ARGS
+      description: >-
+        Custom arguments to pass to Chromium.
+      type: public
+      unraid_template:
+        title: "Custom Arguments"
+        display: advanced
+        required: false
+        mask: false
 
   # Volumes
   volumes: []
