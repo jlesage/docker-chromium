@@ -16,6 +16,11 @@ if [ -n "${CHROMIUM_APP_URL:-}" ]; then
     printf "%s\n" "--app=$CHROMIUM_APP_URL"
 fi
 
+# Remote debugging.
+if is-bool-val-true "${CHROMIUM_REMOTE_DEBUGGING:-0}"; then
+    printf "%s\n" "--remote-debugging-port=$((${CHROMIUM_REMOTE_DEBUGGING_PORT:-9222} + 1))"
+fi
+
 # Custom arguments.
 if [ -n "${CHROMIUM_CUSTOM_ARGS:-}" ]; then
     eval 'for word in '$CHROMIUM_CUSTOM_ARGS'; do echo "$word"; done'

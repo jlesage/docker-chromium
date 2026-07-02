@@ -143,6 +143,27 @@ container:
         display: advanced
         required: false
         mask: false
+    - name: CHROMIUM_REMOTE_DEBUGGING
+      description: >-
+        When set to `1`, enables the Chrome DevTools Protocol (CDP) interface,
+        which allows external tools to inspect and control the browser instance.
+      type: public
+      default: 0
+      unraid_template:
+        title: "Remote Debugging"
+        display: advanced
+        required: false
+        mask: false
+    - name: CHROMIUM_REMOTE_DEBUGGING_PORT
+      description: >-
+        Port on which the remote debugging interface listens.
+      type: public
+      default: 9222
+      unraid_template:
+        title: "Remote Debugging Interface Listen Port"
+        display: advanced
+        required: false
+        mask: false
     - name: CHROMIUM_CUSTOM_ARGS
       description: >-
         Custom arguments to pass to Chromium.
@@ -157,7 +178,18 @@ container:
   volumes: []
 
   # Network ports
-  ports: []
+  ports:
+    - number: 9222
+      protocol: tcp
+      description: >-
+        Port to access the {{ app.friendly_name }} remote debugging interface.
+      mandatory: false
+      unraid_template:
+        title: Remote Debugging Interface Port
+        default: 9222
+        display: advanced
+        required: false
+        mask: false
 
   # Devices
   devices: []

@@ -35,6 +35,7 @@ RUN \
 # Install extra packages.
 RUN \
     add-pkg \
+        socat \
         adwaita-icon-theme \
         mesa-gl \
         mesa-dri-gallium \
@@ -59,7 +60,13 @@ RUN \
 # Set public environment variables.
 ENV \
     CHROMIUM_APP_URL= \
+    CHROMIUM_REMOTE_DEBUGGING=0 \
+    CHROMIUM_REMOTE_DEBUGGING_PORT=9222 \
     CHROMIUM_CUSTOM_ARGS=
+
+# Expose ports.
+#   - 9222: For Chromium remote debugging.
+EXPOSE 9222
 
 # Metadata.
 LABEL \

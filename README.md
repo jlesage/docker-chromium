@@ -148,6 +148,8 @@ the `-e` parameter in the format `<VARIABLE_NAME>=<VALUE>`.
 |`VNC_PASSWORD`| Password required to connect to the application's GUI. See the [VNC Password](#vnc-password) section for details. | (no value) |
 |`ENABLE_CJK_FONT`| When set to `1`, installs the open-source font `WenQuanYi Zen Hei`, supporting a wide range of Chinese/Japanese/Korean characters. | `0` |
 |`CHROMIUM_APP_URL`| URL of the website to launch in a dedicated, minimalist window without browser UI components like the address bar or tabs, essentially running it as a desktop application. | (no value) |
+|`CHROMIUM_REMOTE_DEBUGGING`| When set to `1`, enables the Chrome DevTools Protocol (CDP) interface, which allows external tools to inspect and control the browser instance. | `0` |
+|`CHROMIUM_REMOTE_DEBUGGING_PORT`| Port on which the remote debugging interface listens. | `9222` |
 |`CHROMIUM_CUSTOM_ARGS`| Custom arguments to pass to Chromium. | (no value) |
 
 #### Deployment Considerations
@@ -210,6 +212,7 @@ documentation for details.
 |------|----------|-----------------|-------------|
 | 5800 | TCP | Optional | Port to access the application's GUI via the web interface. Mapping to the host is optional if web access is not needed. For non-default bridge networks, the port can be changed with the `WEB_LISTENING_PORT` environment variable. |
 | 5900 | TCP | Optional | Port to access the application's GUI via the VNC protocol. Mapping to the host is optional if VNC access is not needed. For non-default bridge networks, the port can be changed with the `VNC_LISTENING_PORT` environment variable. |
+| 9222 | TCP | Optional | Port to access the Chromium remote debugging interface. |
 
 ### Changing Parameters of a Running Container
 
