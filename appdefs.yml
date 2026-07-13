@@ -56,6 +56,13 @@ app:
           [default seccomp profile]: https://github.com/moby/moby/blob/master/vendor/github.com/moby/profiles/seccomp/default.json
           [seccomp profile]: https://docs.docker.com/engine/security/seccomp/
   changelog:
+    - version: 26.07.2
+      date: 2026-07-13
+      changes:
+        - 'Updated Chromium to version 150.0.7871.114-r0.'
+        - 'Updated baseimage to version 4.12.6, bringing the following changes:'
+        - '2:Fixed regression causing container startup failure when the container engine automatically mounts files under `/run`.'
+        - '2:Read-only filesystem support now requires exposing `/run` as a tmpfs.'
     - version: 26.07.1
       date: 2026-07-03
       changes:
