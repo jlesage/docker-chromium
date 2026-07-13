@@ -20,7 +20,7 @@ FROM jlesage/baseimage-gui:alpine-3.24-v4.12.6
 ARG DOCKER_IMAGE_VERSION=
 
 # Define software versions.
-ARG CHROMIUM_VERSION=149.0.7827.200-r0
+ARG CHROMIUM_VERSION=150.0.7871.114-r0
 
 # Define software download URLs.
 
