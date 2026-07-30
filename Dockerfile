@@ -30,7 +30,8 @@ WORKDIR /tmp
 # Install Chromium.
 RUN \
     add-pkg \
-        chromium=${CHROMIUM_VERSION}
+        chromium=${CHROMIUM_VERSION} \
+        chromium-lang==${CHROMIUM_VERSION}
 
 # Install extra packages.
 RUN \
