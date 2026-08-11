@@ -56,6 +56,14 @@ app:
           [default seccomp profile]: https://github.com/moby/moby/blob/master/vendor/github.com/moby/profiles/seccomp/default.json
           [seccomp profile]: https://docs.docker.com/engine/security/seccomp/
   changelog:
+    - version: 26.08.1
+      date: 2026-08-11
+      changes:
+        - 'Updated Chromium to version 151.0.7922.108-r0.'
+        - 'Updated baseimage to version 4.13.1, bringing the following changes:'
+        - '2:Host clipboard sync can now be controlled via environment variable and web UI toggle.'
+        - '2:Improved reliability and security of the web interface.'
+        - '2:Improved reliability and security of services.'
     - version: 26.07.3
       date: 2026-07-30
       changes:
