@@ -2,7 +2,7 @@
 
 set -u # Treat unset variables as an error.
 
-if ! check_pid_namespace >/dev/null; then
+if ! check_pid_namespace >/dev/null && [ -f /proc/sys/kernel/unprivileged_userns_clone ] ; then
     printf "%s\n" "--no-sandbox"
 fi
 
